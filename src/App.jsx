@@ -5,9 +5,7 @@ import Spinner from './components/Spinner'
 
 const API_BASE_URL = 'https://api.themoviedb.org/3'
 
-// const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
-const API_KEY =
-  'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MDA1ZTFhNjljMThhNDZlNzUxMWVmYzYzZGM2NjA5ZCIsIm5iZiI6MTYyMDUxNzE4NC41OTIsInN1YiI6IjYwOTcyMTQwMmIyMTA4MDA0MmFkMTE2MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qTy9bc-_0g3ZsuZAp40wEhYdKuPQ_5t6JQgj-iUkqJY'
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY
 
 const API_OPTIONS = {
   method: 'GET',
