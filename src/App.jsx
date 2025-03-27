@@ -4,6 +4,7 @@ import { useDebounce } from 'react-use'
 import Search from './components/Search'
 import Spinner from './components/Spinner'
 import MovieCard from './components/MovieCard'
+import { updateSearchCount } from './appwrite'
 
 const API_BASE_URL = 'https://api.themoviedb.org/3'
 
@@ -53,6 +54,10 @@ const App = () => {
       }
 
       setMovieList(data.results || [])
+
+      if (query && data.results.length > 0) {
+        await updateSearchCount(query, data.results[0])
+      }
 
       console.log(data)
     } catch (error) {
